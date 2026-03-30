@@ -1,6 +1,7 @@
 
 import './App.css'
-
+import Batsman from './Batsman';
+import Counter from './Counter';
 function App() {
  function handleClick(){
   alert('I am clicked.');
@@ -17,7 +18,8 @@ function App() {
 
   return (
     <>
-     
+     <Batsman></Batsman>
+     <Counter></Counter>
     <h1>Vite + React</h1>
     <button onClick={handleClick}>Click me-1</button>
     <button onClick={function handClick2(){
