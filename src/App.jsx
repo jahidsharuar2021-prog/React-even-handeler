@@ -6,6 +6,7 @@ import Counter from './Counter';
 import Users from './Users';
 import Friends from './Friends';
 import Posts from './Posts';
+import Players from './Players';
 
 // const fetchUser=fetch("https://jsonplaceholder.typicode.com/users")
 // .then(res=>res.json())
@@ -15,14 +16,14 @@ import Posts from './Posts';
 //   return res.json();
 // }
  
-const fetchPost=async()=>{
-  const res=await fetch('https://jsonplaceholder.typicode.com/posts');
-  return res.json();
-}
+// const fetchPost=async()=>{
+//   const res=await fetch('https://jsonplaceholder.typicode.com/posts');
+//   return res.json();
+// }
 
 function App() {
 
-  const postPromise=fetchPost();
+  // const postPromise=fetchPost();
 
 // const friendsPromise=fetchFriends();
 
@@ -42,9 +43,9 @@ function App() {
   return (
     <>
      
-     <Suspense fallback={<h4>posts are coming don't scroll</h4>}>
+     {/* <Suspense fallback={<h4>posts are coming don't scroll</h4>}>
      <Posts  postPromise={ postPromise}></Posts>
-     </Suspense>
+     </Suspense> */}
 
      {/* <Suspense fallback={<h3>Loading ...</h3>}>
        <Users fetchUser={fetchUser}></Users>
@@ -54,7 +55,7 @@ function App() {
       <Friends friendsPromise={friendsPromise}></Friends>
      </Suspense> */}
 
-    
+    <Players></Players>
      <Batsman></Batsman>
      <Counter></Counter>
 
